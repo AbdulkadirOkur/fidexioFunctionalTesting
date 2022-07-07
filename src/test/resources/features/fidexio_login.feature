@@ -1,4 +1,4 @@
-@wip
+
 Feature:As a user, I should be able to log in so that I can land on homepage.
   AC1-Users can log in with valid credentials (We have 5 types of users but will test only 2 user: PosManager, SalesManager)
   AC2-"Wrong login/password" should be displayed for invalid (valid username-invalid password and invalid username-valid password) credentials
@@ -10,7 +10,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
   Background:
     Given user is on the Login page
 
-  @FIDEXI-505 @wip
+  @FIDEXI-505
   Scenario Outline:Login as PosManager with valid credentials
     When User enter username "<username>"
     And User enter password "<password>"
@@ -24,7 +24,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | posmanager32@info.com | posmanager |
       | posmanager42@info.com | posmanager |
 
-  @FIDEXI-506 @wip
+  @FIDEXI-506
   Scenario Outline:Login as SalesManager with valid credentials
     When User enter username "<username>"
     And User enter password "<password>"
@@ -39,7 +39,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | salesmanager51@info.com | salesmanager |
 
 
-  @FIDEXI-507 @wip
+  @FIDEXI-507
   Scenario Outline:US-001/TC-003 Verify that "Wrong login/password" should display with valid username and invalid password
     When User enter username "<username>"
     And User enter password "<password>"
@@ -64,7 +64,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | salesmanager15@info.com | alesmanager |
       | salesmanager19@info.com | alesmanager |
 
-  @FIDEXI-508 @wip
+  @FIDEXI-508
   Scenario Outline:US-001/TC-004 Verify that "Wrong login password" should display with invalid username and valid password
     When User enter username "<username>"
     And User enter password "<password>"
@@ -83,7 +83,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | asdfasd                | salesmanager |
       | asdfasd                | posmanager   |
 
-  @FIDEXI-509 @wip
+  @FIDEXI-509
   Scenario Outline:US-001/TC-005 Verifying that "Please fill out this field" message should be displayed if username is empty
     When User enter password "<password>"
     And User click login button
@@ -93,7 +93,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | posmanager |
       | asdfgh     |
 
-  @FIDEXI-510 @wip
+  @FIDEXI-510
   Scenario Outline:US-001/TC-006 Verifying that "Please fill out this field" message should be displayed if password is empty
     When User enter username "<username>"
     And User click login button
@@ -104,12 +104,12 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | salesmanager15@info.com |
       | asdfgh                  |
 
-  @FIDEXI-511 @wip
+  @FIDEXI-511
   Scenario:US-001/TC-007 Verify that User land on the ‘reset password’ page after clicking on the "Reset password" link
     When User clicks reset password link
     Then User should land reset password page and see "Reset password" inside title
 
-  @FIDEXI-512 @wip
+  @FIDEXI-512
   Scenario Outline:US-001/TC-008 Verify that User see the password in bullet signs by default
     When User enter password "<password>"
     Then User should see password as bullet signs
@@ -118,7 +118,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | posmanager |
       | adfasdf    |
 
-  @FIDEXI-513 @wip
+  @FIDEXI-513
   Scenario Outline:US-001/TC-009 Verify that the ‘Enter’ key of the keyboard is working correctly on the login page with valid credentials
     When User enter username "<username>"
     And User enter password "<password>"
@@ -131,7 +131,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | salesmanager15@info.com | salesmanager |
       | salesmanager19@info.com | salesmanager |
 
-  @FIDEXI-514 @wip
+  @FIDEXI-514
   Scenario Outline:US-001/TC-010 Verify that the ‘Enter’ key of the keyboard is working correctly on the login page with invalid credentails
     When User enter username "<username>"
     And User enter password "<password>"
@@ -148,7 +148,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | alesmanager15@info.com | salesmanage |
       | salesmanage19@info.com | salesmanage |
 
-  @FIDEXI-515 @wip
+  @FIDEXI-515
   Scenario Outline:US-001/TC-011 Verify that the ‘Enter’ key of the keyboard is working correctly on the login page with  empty username filled password inbox
     When User enter password "<password>"
     And user press Enter key
@@ -158,7 +158,7 @@ Feature:As a user, I should be able to log in so that I can land on homepage.
       | posmanager |
       | asdfgh     |
 
-  @FIDEXI-516 @wip
+  @FIDEXI-516
   Scenario Outline:US-001/TC-012 Verify that the ‘Enter’ key of the keyboard is working correctly on the login page with  filled username and empty password inbox
     When User enter username "<username>"
     And user press Enter key

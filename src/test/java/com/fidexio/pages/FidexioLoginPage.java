@@ -32,21 +32,30 @@ public class FidexioLoginPage {
     @FindBy(xpath = "//a[.='Reset Password']")
     public WebElement resetPasswordLink;
 
+    //Navigate to the login page
+    public void gotoLoginPage(){
+        String loginPageLink = ConfigurationReader.getProperty("fidexioPage");
+        Driver.getDriver().get(loginPageLink);
+    }
+
 
     //Default login for PosManager
     public void loginPosManager(){
+        gotoLoginPage();
         loginInput.sendKeys("posmanager32@info.com");
         passwordInput.sendKeys("posmanager", Keys.ENTER);
     }
 
     //login with username and password for PosManager
     public void loginPosManager(String username,String password){
+        gotoLoginPage();
         loginInput.sendKeys(username);
         passwordInput.sendKeys(password, Keys.ENTER);
     }
 
     //login with configuration.properties for PosManager
     public void loginPosManagerWithConfiguration(){
+        gotoLoginPage();
         String username = ConfigurationReader.getProperty("salesManagerUsername");
         String password = ConfigurationReader.getProperty("salesManagerPassword");
         loginInput.sendKeys(username);
@@ -55,18 +64,21 @@ public class FidexioLoginPage {
 
     //Default login for SalesManager
     public void loginSalesManager(){
+        gotoLoginPage();
         loginInput.sendKeys("salesmanager15@info.com");
         passwordInput.sendKeys("salesmanager", Keys.ENTER);
     }
 
     //login with username and password for SalesManager
     public void loginSalesManager(String username,String password){
+        gotoLoginPage();
         loginInput.sendKeys(username);
         passwordInput.sendKeys(password, Keys.ENTER);
     }
 
     //login with configuration.properties for SalesManager
     public void loginSalesManagerWithConfiguration(){
+        gotoLoginPage();
         String username = ConfigurationReader.getProperty("posManagerUsername");
         String password = ConfigurationReader.getProperty("posManagerPassword");
         loginInput.sendKeys(username);
